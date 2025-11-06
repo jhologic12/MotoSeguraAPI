@@ -1,0 +1,38 @@
+name: SonarCloud
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build:
+    name: Build and analyze
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore MotoSegura.sln
+
+      - name: Build solution
+        run: dotnet build MotoSegura.sln --no-restore
+
+      - name: Run tests with coverage
+        run: dotnet test MotoSegura.sln --no-build --collect:"XPlat Code Coverage"
+
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@v2
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_PROJECT_KEY: jhologic12_MotoSeguraAPI
+          SONAR_ORGANIZATION: jaofdev
