@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "HFJ5BGTAEuv8zcDfUWIEjn4+tMmdaQvE6PVvulnLR00=",
+  "Source": "MotoSeguraAPI",
+  "BasePath": "_content/MotoSeguraAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
