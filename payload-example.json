@@ -1,0 +1,36 @@
+{
+    "fechaInicio": "2025-11-10T15:38:28.635Z",
+    "fechaFin": "2025-11-10T15:38:37.038Z",
+    "distanciaRecorridaKm": 3.2,
+    "velocidadPromedioKmH": 45,
+    "velocidadMaximaKmH": 88,
+    "modoConduccion": "diurna",
+    "ubicacionInicio": {
+        "lat": 11.2408,
+        "lng": -74.199
+    },
+    "ubicacionFin": null,
+    "gps": {
+        "ubicacion": null,
+        "velocidad": 0,
+        "altitud": 15,
+        "direccion": 90
+    },
+    "acelerometro": {
+        "aceleracion": 0,
+        "frenadoBrusco": false
+    },
+    "giroscopio": {
+        "cambioBruscoDireccion": false
+    },
+    "conectividad": {
+        "redMovil": true,
+        "wifi": false
+    },
+    "eventos": [],
+    "verificacionCasco": {
+        "fotoCasco":"base64",
+        "casco_detectado": true
+        
+    }
+}
