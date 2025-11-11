@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MotoSeguraAPI.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+29807a99978a67793eac125011b505b8ea727833")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+adca50775686f9f05e2576fecdc18d250e907c49")]
 [assembly: System.Reflection.AssemblyProductAttribute("MotoSeguraAPI.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MotoSeguraAPI.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

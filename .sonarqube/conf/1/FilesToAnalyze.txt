@@ -1,0 +1,8 @@
+﻿C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI.Tests\Controllers\HelmetControllerTests.cs
+C:\Users\jaofd\.nuget\packages\microsoft.net.test.sdk\17.8.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.cs
+C:\Users\jaofd\.nuget\packages\microsoft.testplatform.testhost\17.8.0\build\netcoreapp3.1\x64\testhost.exe
+C:\Users\jaofd\.nuget\packages\microsoft.testplatform.testhost\17.8.0\build\netcoreapp3.1\x64\testhost.dll
+C:\Users\jaofd\.nuget\packages\xunit.runner.visualstudio\2.5.3\build\net6.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\jaofd\.nuget\packages\xunit.runner.visualstudio\2.5.3\build\net6.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\jaofd\.nuget\packages\xunit.runner.visualstudio\2.5.3\build\net6.0\xunit.runner.utility.netcoreapp10.dll
+C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI.Tests\TestResults\51b769a5-814b-4ff3-87ee-7a885f1cfebe\coverage.cobertura.xml

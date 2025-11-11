@@ -1,0 +1,1 @@
+aRKC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI.Tests\MotoSeguraAPI.Tests.csproj¢net8.0òCSharp12

@@ -1,0 +1,4 @@
+¹
+UC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI.Tests\Controllers\HelmetControllerTests.csMotoSeguraAPI.Tests^
+5MotoSeguraAPI.Tests.Controllers.HelmetControllerTests%ValidateHelmet_ValidRequest_ReturnsOkk
+5MotoSeguraAPI.Tests.Controllers.HelmetControllerTests2ValidateHelmet_InvalidHelmetType_ReturnsBadRequest

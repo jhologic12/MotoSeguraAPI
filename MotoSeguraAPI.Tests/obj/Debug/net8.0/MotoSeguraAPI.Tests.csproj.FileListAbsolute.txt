@@ -176,3 +176,4 @@ C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI.Tests\obj\Debug\net8.0\MotoSeguraAPI.
 C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI.Tests\obj\Debug\net8.0\MotoSeguraAPI.Tests.genruntimeconfig.cache
 C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI.Tests\obj\Debug\net8.0\ref\MotoSeguraAPI.Tests.dll
 C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI.Tests\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI.Tests\obj\Debug\net8.0\MotoSeguraAPI.Tests.sourcelink.json

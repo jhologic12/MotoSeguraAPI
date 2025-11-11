@@ -1,0 +1,1 @@
+C:\jaofdev\MotoSeguraBackend\.sonarqube\out\1
