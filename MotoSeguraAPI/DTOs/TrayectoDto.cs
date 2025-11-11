@@ -7,7 +7,7 @@ namespace MotoSeguraApi.Dtos
     public class TrayectoDto
     {
 
-        public Guid UserId { get; set; } 
+       
 
         public DateTime FechaInicio { get; set; }
         public DateTime FechaFin { get; set; }

@@ -6,7 +6,7 @@ namespace MotoSeguraAPI.Models
     public class Evento
     {
         [Key]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         [Required]
         public string Tipo { get; set; } = string.Empty;
@@ -18,7 +18,7 @@ namespace MotoSeguraAPI.Models
 
         // Relación con Trayecto
         [ForeignKey("Trayecto")]
-        public int TrayectoId { get; set; }
+        public Guid TrayectoId { get; set; }
         public Trayecto Trayecto { get; set; } = null!;
     }
 }

@@ -17,27 +17,65 @@ namespace MotoSeguraAPI.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.10");
 
-            modelBuilder.Entity("MotoSeguraAPI.Models.EventLog", b =>
+            modelBuilder.Entity("MotoSeguraAPI.Models.Evento", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
+                    b.Property<string>("Detalles")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("Timestamp")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Tipo")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("TrayectoId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TrayectoId");
+
+                    b.ToTable("Eventos");
+                });
+
+            modelBuilder.Entity("MotoSeguraAPI.Models.Trayecto", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<double>("DistanciaRecorridaKm")
+                        .HasColumnType("REAL");
+
+                    b.Property<DateTime>("FechaFin")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("FechaInicio")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ModoConduccion")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<Guid>("UserId")
                         .HasColumnType("TEXT");
+
+                    b.Property<double>("VelocidadMaximaKmH")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("VelocidadPromedioKmH")
+                        .HasColumnType("REAL");
 
                     b.HasKey("Id");
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("EventLogs");
+                    b.ToTable("Trayectos");
                 });
 
             modelBuilder.Entity("MotoSeguraAPI.Models.User", b =>
@@ -46,14 +84,15 @@ namespace MotoSeguraAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("HelmetType")
+                    b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("HelmetValidated")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("PasswordHash")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -62,15 +101,212 @@ namespace MotoSeguraAPI.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("MotoSeguraAPI.Models.EventLog", b =>
+            modelBuilder.Entity("MotoSeguraAPI.Models.Evento", b =>
+                {
+                    b.HasOne("MotoSeguraAPI.Models.Trayecto", "Trayecto")
+                        .WithMany("Eventos")
+                        .HasForeignKey("TrayectoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Trayecto");
+                });
+
+            modelBuilder.Entity("MotoSeguraAPI.Models.Trayecto", b =>
                 {
                     b.HasOne("MotoSeguraAPI.Models.User", "User")
-                        .WithMany()
+                        .WithMany("Trayectos")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.OwnsOne("MotoSeguraAPI.Models.SubModels.Acelerometro", "Acelerometro", b1 =>
+                        {
+                            b1.Property<Guid>("TrayectoId")
+                                .HasColumnType("TEXT");
+
+                            b1.Property<double>("Aceleracion")
+                                .HasColumnType("REAL");
+
+                            b1.Property<bool>("FrenadoBrusco")
+                                .HasColumnType("INTEGER");
+
+                            b1.HasKey("TrayectoId");
+
+                            b1.ToTable("Trayectos");
+
+                            b1.WithOwner()
+                                .HasForeignKey("TrayectoId");
+                        });
+
+                    b.OwnsOne("MotoSeguraApi.Models.SubModels.Coordenadas", "UbicacionFin", b1 =>
+                        {
+                            b1.Property<Guid>("TrayectoId")
+                                .HasColumnType("TEXT");
+
+                            b1.Property<double>("Lat")
+                                .HasColumnType("REAL");
+
+                            b1.Property<double>("Lng")
+                                .HasColumnType("REAL");
+
+                            b1.HasKey("TrayectoId");
+
+                            b1.ToTable("Trayectos");
+
+                            b1.WithOwner()
+                                .HasForeignKey("TrayectoId");
+                        });
+
+                    b.OwnsOne("MotoSeguraApi.Models.SubModels.Coordenadas", "UbicacionInicio", b1 =>
+                        {
+                            b1.Property<Guid>("TrayectoId")
+                                .HasColumnType("TEXT");
+
+                            b1.Property<double>("Lat")
+                                .HasColumnType("REAL");
+
+                            b1.Property<double>("Lng")
+                                .HasColumnType("REAL");
+
+                            b1.HasKey("TrayectoId");
+
+                            b1.ToTable("Trayectos");
+
+                            b1.WithOwner()
+                                .HasForeignKey("TrayectoId");
+                        });
+
+                    b.OwnsOne("MotoSeguraApi.Models.SubModels.Conectividad", "Conectividad", b1 =>
+                        {
+                            b1.Property<Guid>("TrayectoId")
+                                .HasColumnType("TEXT");
+
+                            b1.Property<bool>("RedMovil")
+                                .HasColumnType("INTEGER");
+
+                            b1.Property<bool>("Wifi")
+                                .HasColumnType("INTEGER");
+
+                            b1.HasKey("TrayectoId");
+
+                            b1.ToTable("Trayectos");
+
+                            b1.WithOwner()
+                                .HasForeignKey("TrayectoId");
+                        });
+
+                    b.OwnsOne("MotoSeguraApi.Models.SubModels.Giroscopio", "Giroscopio", b1 =>
+                        {
+                            b1.Property<Guid>("TrayectoId")
+                                .HasColumnType("TEXT");
+
+                            b1.Property<bool>("CambioBruscoDireccion")
+                                .HasColumnType("INTEGER");
+
+                            b1.HasKey("TrayectoId");
+
+                            b1.ToTable("Trayectos");
+
+                            b1.WithOwner()
+                                .HasForeignKey("TrayectoId");
+                        });
+
+                    b.OwnsOne("MotoSeguraApi.Models.SubModels.Gps", "Gps", b1 =>
+                        {
+                            b1.Property<Guid>("TrayectoId")
+                                .HasColumnType("TEXT");
+
+                            b1.Property<double>("Altitud")
+                                .HasColumnType("REAL");
+
+                            b1.Property<double>("Direccion")
+                                .HasColumnType("REAL");
+
+                            b1.Property<double>("Velocidad")
+                                .HasColumnType("REAL");
+
+                            b1.HasKey("TrayectoId");
+
+                            b1.ToTable("Trayectos");
+
+                            b1.WithOwner()
+                                .HasForeignKey("TrayectoId");
+
+                            b1.OwnsOne("MotoSeguraApi.Dtos.CoordenadasDto", "Ubicacion", b2 =>
+                                {
+                                    b2.Property<Guid>("GpsTrayectoId")
+                                        .HasColumnType("TEXT");
+
+                                    b2.Property<double>("Lat")
+                                        .HasColumnType("REAL");
+
+                                    b2.Property<double>("Lng")
+                                        .HasColumnType("REAL");
+
+                                    b2.HasKey("GpsTrayectoId");
+
+                                    b2.ToTable("Trayectos");
+
+                                    b2.WithOwner()
+                                        .HasForeignKey("GpsTrayectoId");
+                                });
+
+                            b1.Navigation("Ubicacion")
+                                .IsRequired();
+                        });
+
+                    b.OwnsOne("MotoSeguraApi.Models.SubModels.VerificacionCasco", "VerificacionCasco", b1 =>
+                        {
+                            b1.Property<Guid>("TrayectoId")
+                                .HasColumnType("TEXT");
+
+                            b1.Property<bool>("CascoDetectado")
+                                .HasColumnType("INTEGER");
+
+                            b1.Property<string>("FotoCasco")
+                                .IsRequired()
+                                .HasColumnType("TEXT");
+
+                            b1.HasKey("TrayectoId");
+
+                            b1.ToTable("Trayectos");
+
+                            b1.WithOwner()
+                                .HasForeignKey("TrayectoId");
+                        });
+
+                    b.Navigation("Acelerometro")
+                        .IsRequired();
+
+                    b.Navigation("Conectividad")
+                        .IsRequired();
+
+                    b.Navigation("Giroscopio")
+                        .IsRequired();
+
+                    b.Navigation("Gps")
+                        .IsRequired();
+
+                    b.Navigation("UbicacionFin");
+
+                    b.Navigation("UbicacionInicio")
+                        .IsRequired();
+
                     b.Navigation("User");
+
+                    b.Navigation("VerificacionCasco")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("MotoSeguraAPI.Models.Trayecto", b =>
+                {
+                    b.Navigation("Eventos");
+                });
+
+            modelBuilder.Entity("MotoSeguraAPI.Models.User", b =>
+                {
+                    b.Navigation("Trayectos");
                 });
 #pragma warning restore 612, 618
         }

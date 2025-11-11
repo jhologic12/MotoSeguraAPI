@@ -13,6 +13,9 @@ namespace MotoSeguraAPI.Models
         [Required]
         [EmailAddress]
         public string Email { get; set; } = string.Empty;
+        [Required]
+        public string PasswordHash { get; set; } = null!;
+
 
         // Relación con trayectos (si decides implementarla)
         public ICollection<Trayecto> Trayectos { get; set; } = new List<Trayecto>();
