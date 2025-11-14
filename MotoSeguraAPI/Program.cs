@@ -1,41 +1,37 @@
 using FluentValidation.AspNetCore;
-using MotoSeguraAPI.Data;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using MotoSeguraAPI.Validators;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using System.Text;
-using FluentValidation;
-using MotoSeguraAPI.Services.Interfaces;
-using MotoSeguraApi.Dtos;
 using Microsoft.OpenApi.Models;
+using System.Text;
+using MotoSeguraAPI.Data;
 using MotoSeguraAPI.Services;
+using MotoSeguraAPI.Services.Interfaces;
+using MotoSeguraAPI.Services.Historial;
+using MotoSeguraAPI.Validators;
+using MotoSeguraApi.Dtos;
+using FluentValidation;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 🧩 Servicios base
-builder.Services.AddControllers();
-
-// ✅ FluentValidation
-builder.Services.AddFluentValidationAutoValidation();
-builder.Services.AddFluentValidationClientsideAdapters();
-builder.Services.AddValidatorsFromAssemblyContaining<TrayectoValidator>();
-
-// 🧭 AutoMapper
-builder.Services.AddAutoMapper(typeof(Program));
-
-// 🗃️ Base de datos SQLite
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlite("Data Source=motosegura.db"));
+// 🌐 Configura Kestrel para HTTP y HTTPS
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(5086); // HTTP
+    options.ListenAnyIP(7043, listen =>
+    {
+        listen.UseHttps("localhost.pfx", "1234");
+    });
+});
 
 // 🔐 Configuración JWT
 var jwtKey = builder.Configuration["Jwt:Key"]
     ?? throw new InvalidOperationException("JWT Key is missing.");
 if (jwtKey.Length < 32)
     throw new InvalidOperationException("JWT Key must be at least 32 characters.");
-
 Console.WriteLine($"🧪 Clave JWT desde configuración: {jwtKey}");
 
+// 🛡️ Autenticación JWT
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -44,7 +40,6 @@ builder.Services.AddAuthentication(options =>
 .AddJwtBearer(options =>
 {
     Console.WriteLine($"🔑 Clave JWT usada en middleware: {jwtKey}");
-
     options.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuer = true,
@@ -53,16 +48,30 @@ builder.Services.AddAuthentication(options =>
         ValidateIssuerSigningKey = true,
         ValidIssuer = builder.Configuration["Jwt:Issuer"],
         ValidAudience = builder.Configuration["Jwt:Audience"],
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey!))
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey))
     };
 });
 
 builder.Services.AddAuthorization();
 
+// 🗃️ Base de datos SQLite
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlite("Data Source=motosegura.db"));
+
+// 🧩 Servicios base
+builder.Services.AddControllers();
+builder.Services.AddAutoMapper(typeof(Program));
+
+// ✅ Validaciones con FluentValidation
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddFluentValidationClientsideAdapters();
+builder.Services.AddValidatorsFromAssemblyContaining<TrayectoValidator>();
+
 // 🧰 Servicios personalizados
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<JwtService>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<HistorialUsuarioService>();
 
 // 📚 Swagger con soporte para JWT
 builder.Services.AddEndpointsApiExplorer();
@@ -93,14 +102,37 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
+// 🌍 CORS para frontend móvil
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("PermitirFrontend", policy =>
+    {
+        policy.WithOrigins("https://192.168.1.1:4173",
+                            "http://10.0.2.2:4173",
+                            "http://192.168.1.1:4173",
+                            "https://192.168.1.1:5173",
+                            "https://localhost:5086")
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials();
+    });
+});
+
 var app = builder.Build();
 
-// 🚦 Middleware
+// 🚦 Middleware en orden correcto
+app.UseRouting(); // ✅ necesario para CORS
+app.UseCors("PermitirFrontend");
+
+app.UseAuthentication();
+app.UseAuthorization();
+
 app.UseSwagger();
 app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
+// 🧪 Log de encabezado Authorization
 app.Use(async (context, next) =>
 {
     var authHeader = context.Request.Headers["Authorization"].ToString();
@@ -108,10 +140,6 @@ app.Use(async (context, next) =>
     await next();
 });
 
-
-app.UseAuthentication(); // ✅ debe ir antes
-app.UseAuthorization();
-
-app.MapControllers(); // ✅ debe ir después
+app.MapControllers();
 
 await app.RunAsync();

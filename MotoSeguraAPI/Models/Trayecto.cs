@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations.Schema;
 using MotoSeguraApi.Models.SubModels;
 using MotoSeguraAPI.Models.SubModels;
 
@@ -7,6 +8,7 @@ namespace MotoSeguraAPI.Models
     public class Trayecto
     {
         public Guid Id { get; set; }
+        public Guid UserId { get; set; }    
         public DateTime FechaInicio { get; set; }
         public DateTime FechaFin { get; set; }
         public double DistanciaRecorridaKm { get; set; }
@@ -19,12 +21,19 @@ namespace MotoSeguraAPI.Models
 
         public required Gps Gps { get; set; }
         public required Acelerometro Acelerometro { get; set; }
-        public  required Giroscopio Giroscopio { get; set; }
+        public required Giroscopio Giroscopio { get; set; }
         public required Conectividad Conectividad { get; set; }
         public required VerificacionCasco VerificacionCasco { get; set; }
 
         public List<Evento> Eventos { get; set; } = new();
-        public Guid UserId { get; set; }
-        public User? User { get; set; }
+        
+        [ForeignKey("UserId")]
+        public User User { get; set; } = null!;
+
+
+        public double AceleracionPromedio { get; set; }
+        public int FrenadasFuertes { get; set; }
+        public int GirosBruscos { get; set; }
+        public int ExcesoVelocidad { get; set; }
     }
 }

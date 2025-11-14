@@ -17,7 +17,13 @@ namespace MotoSeguraAPI.Mappings
             CreateMap<AcelerometroDto, Acelerometro>();
             CreateMap<GiroscopioDto, Giroscopio>();
             CreateMap<ConectividadDto, Conectividad>();
-            CreateMap<VerificacionCascoDto, VerificacionCasco>();
+            CreateMap<VerificacionCascoDto, VerificacionCasco>()
+     .ForMember(dest => dest.CascoDetectado, opt => opt.MapFrom(src => src.Casco_Detectado));
+     CreateMap<Trayecto, TrayectoResumenDto>()
+    .ForMember(dest => dest.Eventos, opt => opt.MapFrom(src => src.Eventos.Count))
+    .ForMember(dest => dest.CascoDetectado, opt => opt.MapFrom(src => src.VerificacionCasco.CascoDetectado));
+
+
             CreateMap<EventoDetectadoDto, Evento>();
         }
     }

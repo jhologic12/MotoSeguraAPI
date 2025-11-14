@@ -1,0 +1,1719 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Compilador de Microsoft (R) Visual C#",
+        "version": "4.11.0.0",
+        "fileVersion": "4.11.0-3.24554.2 (bc1c3011)",
+        "semanticVersion": "4.11.0",
+        "language": "es-MX"
+      },
+      "results": [
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "El elemento propiedad \"Users\" que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador \"required'\"o declarar el propiedad como un valor que acepta valores NULL.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Data/ApplicationDbContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Data/ApplicationDbContext.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 28,
+                  "endLine": 14,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "El elemento propiedad \"Trayectos\" que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador \"required'\"o declarar el propiedad como un valor que acepta valores NULL.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Data/ApplicationDbContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Data/ApplicationDbContext.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 32,
+                  "endLine": 15,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "El elemento propiedad \"Eventos\" que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador \"required'\"o declarar el propiedad como un valor que acepta valores NULL.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Data/ApplicationDbContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Data/ApplicationDbContext.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 30,
+                  "endLine": 16,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'INTEGER' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105225223_GuidSupport.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 50,
+                  "endLine": 18,
+                  "endColumn": 59
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105225223_GuidSupport.cs",
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 54,
+                  "endLine": 22,
+                  "endColumn": 63
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105225223_GuidSupport.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 50,
+                  "endLine": 33,
+                  "endColumn": 59
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105225223_GuidSupport.cs",
+                "region": {
+                  "startLine": 37,
+                  "startColumn": 64,
+                  "endLine": 37,
+                  "endColumn": 73
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'EventLogs' 6 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105233222_InitialCreate.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 24,
+                  "endLine": 15,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105233222_InitialCreate.cs",
+                "region": {
+                  "startLine": 25,
+                  "startColumn": 24,
+                  "endLine": 25,
+                  "endColumn": 35
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105233222_InitialCreate.cs",
+                "region": {
+                  "startLine": 30,
+                  "startColumn": 24,
+                  "endLine": 30,
+                  "endColumn": 35
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105233222_InitialCreate.cs",
+                "region": {
+                  "startLine": 42,
+                  "startColumn": 24,
+                  "endLine": 42,
+                  "endColumn": 35
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105233222_InitialCreate.cs",
+                "region": {
+                  "startLine": 46,
+                  "startColumn": 24,
+                  "endLine": 46,
+                  "endColumn": 35
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105233222_InitialCreate.cs",
+                "region": {
+                  "startLine": 50,
+                  "startColumn": 24,
+                  "endLine": 50,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Users' 6 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105230923_UpdateModelsWithGuidAndValidation.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 24,
+                  "endLine": 16,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105230923_UpdateModelsWithGuidAndValidation.cs",
+                "region": {
+                  "startLine": 26,
+                  "startColumn": 24,
+                  "endLine": 26,
+                  "endColumn": 31
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105230923_UpdateModelsWithGuidAndValidation.cs",
+                "region": {
+                  "startLine": 36,
+                  "startColumn": 24,
+                  "endLine": 36,
+                  "endColumn": 31
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105230923_UpdateModelsWithGuidAndValidation.cs",
+                "region": {
+                  "startLine": 66,
+                  "startColumn": 24,
+                  "endLine": 66,
+                  "endColumn": 31
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105230923_UpdateModelsWithGuidAndValidation.cs",
+                "region": {
+                  "startLine": 74,
+                  "startColumn": 24,
+                  "endLine": 74,
+                  "endColumn": 31
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105230923_UpdateModelsWithGuidAndValidation.cs",
+                "region": {
+                  "startLine": 82,
+                  "startColumn": 24,
+                  "endLine": 82,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'INTEGER' 6 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105230923_UpdateModelsWithGuidAndValidation.cs",
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 26,
+                  "endLine": 40,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105230923_UpdateModelsWithGuidAndValidation.cs",
+                "region": {
+                  "startLine": 49,
+                  "startColumn": 26,
+                  "endLine": 49,
+                  "endColumn": 35
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105230923_UpdateModelsWithGuidAndValidation.cs",
+                "region": {
+                  "startLine": 57,
+                  "startColumn": 26,
+                  "endLine": 57,
+                  "endColumn": 35
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105230923_UpdateModelsWithGuidAndValidation.cs",
+                "region": {
+                  "startLine": 83,
+                  "startColumn": 23,
+                  "endLine": 83,
+                  "endColumn": 32
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105230923_UpdateModelsWithGuidAndValidation.cs",
+                "region": {
+                  "startLine": 92,
+                  "startColumn": 23,
+                  "endLine": 92,
+                  "endColumn": 32
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105230923_UpdateModelsWithGuidAndValidation.cs",
+                "region": {
+                  "startLine": 100,
+                  "startColumn": 23,
+                  "endLine": 100,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Sqlite:Autoincrement' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105230923_UpdateModelsWithGuidAndValidation.cs",
+                "region": {
+                  "startLine": 41,
+                  "startColumn": 32,
+                  "endLine": 41,
+                  "endColumn": 54
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105230923_UpdateModelsWithGuidAndValidation.cs",
+                "region": {
+                  "startLine": 58,
+                  "startColumn": 32,
+                  "endLine": 58,
+                  "endColumn": 54
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105230923_UpdateModelsWithGuidAndValidation.cs",
+                "region": {
+                  "startLine": 87,
+                  "startColumn": 29,
+                  "endLine": 87,
+                  "endColumn": 51
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105230923_UpdateModelsWithGuidAndValidation.cs",
+                "region": {
+                  "startLine": 104,
+                  "startColumn": 29,
+                  "endLine": 104,
+                  "endColumn": 51
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'EventLogs' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105230923_UpdateModelsWithGuidAndValidation.cs",
+                "region": {
+                  "startLine": 45,
+                  "startColumn": 24,
+                  "endLine": 45,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105230923_UpdateModelsWithGuidAndValidation.cs",
+                "region": {
+                  "startLine": 53,
+                  "startColumn": 24,
+                  "endLine": 53,
+                  "endColumn": 35
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105230923_UpdateModelsWithGuidAndValidation.cs",
+                "region": {
+                  "startLine": 91,
+                  "startColumn": 24,
+                  "endLine": 91,
+                  "endColumn": 35
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251105230923_UpdateModelsWithGuidAndValidation.cs",
+                "region": {
+                  "startLine": 99,
+                  "startColumn": 24,
+                  "endLine": 99,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Eventos' 6 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110194714_UpdateTrayectoModel.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 24,
+                  "endLine": 16,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110194714_UpdateTrayectoModel.cs",
+                "region": {
+                  "startLine": 20,
+                  "startColumn": 24,
+                  "endLine": 20,
+                  "endColumn": 33
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110194714_UpdateTrayectoModel.cs",
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 24,
+                  "endLine": 24,
+                  "endColumn": 33
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110194714_UpdateTrayectoModel.cs",
+                "region": {
+                  "startLine": 32,
+                  "startColumn": 24,
+                  "endLine": 32,
+                  "endColumn": 33
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110194714_UpdateTrayectoModel.cs",
+                "region": {
+                  "startLine": 39,
+                  "startColumn": 24,
+                  "endLine": 39,
+                  "endColumn": 33
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110194714_UpdateTrayectoModel.cs",
+                "region": {
+                  "startLine": 44,
+                  "startColumn": 24,
+                  "endLine": 44,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'TrayectoId1' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110194714_UpdateTrayectoModel.cs",
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 23,
+                  "endLine": 23,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110194714_UpdateTrayectoModel.cs",
+                "region": {
+                  "startLine": 31,
+                  "startColumn": 23,
+                  "endLine": 31,
+                  "endColumn": 36
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110194714_UpdateTrayectoModel.cs",
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 25,
+                  "endLine": 40,
+                  "endColumn": 38
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110194714_UpdateTrayectoModel.cs",
+                "region": {
+                  "startLine": 45,
+                  "startColumn": 25,
+                  "endLine": 45,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Users' 6 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110193049_AddTrayectoModel.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 24,
+                  "endLine": 19,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110193049_AddTrayectoModel.cs",
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 24,
+                  "endLine": 23,
+                  "endColumn": 31
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110193049_AddTrayectoModel.cs",
+                "region": {
+                  "startLine": 61,
+                  "startColumn": 41,
+                  "endLine": 61,
+                  "endColumn": 48
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110193049_AddTrayectoModel.cs",
+                "region": {
+                  "startLine": 121,
+                  "startColumn": 24,
+                  "endLine": 121,
+                  "endColumn": 31
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110193049_AddTrayectoModel.cs",
+                "region": {
+                  "startLine": 126,
+                  "startColumn": 24,
+                  "endLine": 126,
+                  "endColumn": 31
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110193049_AddTrayectoModel.cs",
+                "region": {
+                  "startLine": 146,
+                  "startColumn": 41,
+                  "endLine": 146,
+                  "endColumn": 48
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Trayectos' 5 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110193049_AddTrayectoModel.cs",
+                "region": {
+                  "startLine": 27,
+                  "startColumn": 23,
+                  "endLine": 27,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110193049_AddTrayectoModel.cs",
+                "region": {
+                  "startLine": 83,
+                  "startColumn": 41,
+                  "endLine": 83,
+                  "endColumn": 52
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110193049_AddTrayectoModel.cs",
+                "region": {
+                  "startLine": 89,
+                  "startColumn": 41,
+                  "endLine": 89,
+                  "endColumn": 52
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110193049_AddTrayectoModel.cs",
+                "region": {
+                  "startLine": 106,
+                  "startColumn": 24,
+                  "endLine": 106,
+                  "endColumn": 35
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110193049_AddTrayectoModel.cs",
+                "region": {
+                  "startLine": 117,
+                  "startColumn": 23,
+                  "endLine": 117,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'INTEGER' 6 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110193049_AddTrayectoModel.cs",
+                "region": {
+                  "startLine": 47,
+                  "startColumn": 75,
+                  "endLine": 47,
+                  "endColumn": 84
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110193049_AddTrayectoModel.cs",
+                "region": {
+                  "startLine": 48,
+                  "startColumn": 81,
+                  "endLine": 48,
+                  "endColumn": 90
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110193049_AddTrayectoModel.cs",
+                "region": {
+                  "startLine": 49,
+                  "startColumn": 70,
+                  "endLine": 49,
+                  "endColumn": 79
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110193049_AddTrayectoModel.cs",
+                "region": {
+                  "startLine": 50,
+                  "startColumn": 66,
+                  "endLine": 50,
+                  "endColumn": 75
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110193049_AddTrayectoModel.cs",
+                "region": {
+                  "startLine": 52,
+                  "startColumn": 81,
+                  "endLine": 52,
+                  "endColumn": 90
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110193049_AddTrayectoModel.cs",
+                "region": {
+                  "startLine": 127,
+                  "startColumn": 23,
+                  "endLine": 127,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Eventos' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110193049_AddTrayectoModel.cs",
+                "region": {
+                  "startLine": 67,
+                  "startColumn": 23,
+                  "endLine": 67,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110193049_AddTrayectoModel.cs",
+                "region": {
+                  "startLine": 96,
+                  "startColumn": 24,
+                  "endLine": 96,
+                  "endColumn": 33
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110193049_AddTrayectoModel.cs",
+                "region": {
+                  "startLine": 101,
+                  "startColumn": 24,
+                  "endLine": 101,
+                  "endColumn": 33
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110193049_AddTrayectoModel.cs",
+                "region": {
+                  "startLine": 114,
+                  "startColumn": 23,
+                  "endLine": 114,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Trayectos' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110212706_AddUniqueEmailToUser.cs",
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 24,
+                  "endLine": 22,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110212706_AddUniqueEmailToUser.cs",
+                "region": {
+                  "startLine": 32,
+                  "startColumn": 24,
+                  "endLine": 32,
+                  "endColumn": 35
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110212706_AddUniqueEmailToUser.cs",
+                "region": {
+                  "startLine": 50,
+                  "startColumn": 24,
+                  "endLine": 50,
+                  "endColumn": 35
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110212706_AddUniqueEmailToUser.cs",
+                "region": {
+                  "startLine": 58,
+                  "startColumn": 24,
+                  "endLine": 58,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1172",
+          "level": "warning",
+          "message": "Remove this unused method parameter 'dto'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Services/Analisis/AnalizadorTrayectoService.cs",
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 43,
+                  "endLine": 29,
+                  "endColumn": 58
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "IsRemovable": "True"
+            }
+          }
+        },
+        {
+          "ruleId": "S1172",
+          "level": "warning",
+          "message": "Remove this unused method parameter 'dto'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Services/Analisis/AnalizadorTrayectoService.cs",
+                "region": {
+                  "startLine": 37,
+                  "startColumn": 40,
+                  "endLine": 37,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "IsRemovable": "True"
+            }
+          }
+        },
+        {
+          "ruleId": "S1172",
+          "level": "warning",
+          "message": "Remove this unused method parameter 'dto'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Services/Analisis/AnalizadorTrayectoService.cs",
+                "region": {
+                  "startLine": 43,
+                  "startColumn": 42,
+                  "endLine": 43,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "IsRemovable": "True"
+            }
+          }
+        },
+        {
+          "ruleId": "S4581",
+          "level": "warning",
+          "message": "Use 'Guid.NewGuid()' or 'Guid.Empty' or add arguments to this GUID instantiation.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Migrations/20251110194714_UpdateTrayectoModel.cs",
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 31,
+                  "endLine": 35,
+                  "endColumn": 79
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6781",
+          "level": "warning",
+          "message": "JWT secret keys should not be disclosed, either in code or in configuration files.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Services/JwtService.cs",
+                "region": {
+                  "startLine": 31,
+                  "startColumn": 23,
+                  "endLine": 31,
+                  "endColumn": 92
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S5332",
+          "level": "warning",
+          "message": "Using http protocol is insecure. Use https instead.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Program.cs",
+                "region": {
+                  "startLine": 111,
+                  "startColumn": 29,
+                  "endLine": 111,
+                  "endColumn": 51
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S5332",
+          "level": "warning",
+          "message": "Using http protocol is insecure. Use https instead.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Program.cs",
+                "region": {
+                  "startLine": 112,
+                  "startColumn": 29,
+                  "endLine": 112,
+                  "endColumn": 54
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/DTOs/TrayectoDto.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 25,
+                  "endLine": 12,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/DTOs/TrayectoDto.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 25,
+                  "endLine": 13,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/DTOs/TrayectoDto.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 23,
+                  "endLine": 14,
+                  "endColumn": 43
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/DTOs/TrayectoDto.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 23,
+                  "endLine": 15,
+                  "endColumn": 43
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/DTOs/TrayectoDto.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 23,
+                  "endLine": 16,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/DTOs/CoordenadasDto.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 19,
+                  "endLine": 5,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/DTOs/CoordenadasDto.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 19,
+                  "endLine": 6,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/DTOs/GpsDto.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 19,
+                  "endLine": 6,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/DTOs/GpsDto.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 19,
+                  "endLine": 7,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/DTOs/GpsDto.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 19,
+                  "endLine": 8,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/DTOs/AcelerometroDto.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 19,
+                  "endLine": 5,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/DTOs/AcelerometroDto.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 17,
+                  "endLine": 6,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/DTOs/GiroscopioDto.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 17,
+                  "endLine": 5,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/DTOs/ConectividadDto.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 17,
+                  "endLine": 5,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/DTOs/ConectividadDto.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 17,
+                  "endLine": 6,
+                  "endColumn": 21
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/DTOs/VerificacionCascoDto.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 17,
+                  "endLine": 6,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "ASP0015",
+          "level": "note",
+          "message": "The header 'Authorization' can be accessed using the Authorization property",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/jaofdev/MotoSeguraBackend/MotoSeguraAPI/Program.cs",
+                "region": {
+                  "startLine": 137,
+                  "startColumn": 22,
+                  "endLine": 137,
+                  "endColumn": 62
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "HeaderName": "Authorization",
+              "ResolvedPropertyName": "Authorization"
+            }
+          }
+        }
+      ],
+      "rules": {
+        "ASP0015": {
+          "id": "ASP0015",
+          "shortDescription": "Suggest using IHeaderDictionary properties",
+          "defaultLevel": "note",
+          "helpUri": "https://aka.ms/aspnet/analyzers",
+          "properties": {
+            "category": "Usage",
+            "isEnabledByDefault": true
+          }
+        },
+        "CS8618": {
+          "id": "CS8618",
+          "shortDescription": "Un campo que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador \"required\" o declararlo como un valor que acepta valores NULL.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8618)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "S1172": {
+          "id": "S1172",
+          "shortDescription": "Unused method parameters should be removed",
+          "fullDescription": "A typical code smell known as unused function parameters refers to parameters declared in a function but not used anywhere within the function’s body. While this might seem harmless at first glance, it can lead to confusion and potential errors in your code. Disregarding the values passed to such parameters, the function’s behavior will be the same, but the programmer’s intention won’t be clearly expressed anymore. Therefore, removing function parameters that are not being utilized is considered best practice.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1172",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S1192": {
+          "id": "S1192",
+          "shortDescription": "String literals should not be duplicated",
+          "fullDescription": "Duplicated string literals make the process of refactoring complex and error-prone, as any change would need to be propagated on all occurrences.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1192",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": false,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S4581": {
+          "id": "S4581",
+          "shortDescription": "\"new Guid()\" should not be used",
+          "fullDescription": "When the syntax new Guid() (i.e. parameterless instantiation) is used, it must be that one of three things is wanted:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-4581",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S5332": {
+          "id": "S5332",
+          "shortDescription": "Using clear-text protocols is security-sensitive",
+          "fullDescription": "Clear-text protocols such as ftp, telnet, or http lack encryption of transported data, as well as the capability to build an authenticated connection. It means that an attacker able to sniff traffic from the network can read, modify, or corrupt the transported content. These protocols are not secure as they expose applications to an extensive range of risks:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-5332",
+          "properties": {
+            "category": "Critical Security Hotspot",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S6781": {
+          "id": "S6781",
+          "shortDescription": "JWT secret keys should not be disclosed",
+          "fullDescription": "Secret leaks often occur when a sensitive piece of authentication data is stored with the source code of an application. Considering the source code is intended to be deployed across multiple assets, including source code repositories or application hosting servers, the secrets might get exposed to an unintended audience.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-6781",
+          "properties": {
+            "category": "Blocker Vulnerability",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S6964": {
+          "id": "S6964",
+          "shortDescription": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "fullDescription": "\"Under-posting\" refers to a situation where a client sends less data than expected to the server during an HTTP request, for example when the client omits some properties from the request body that the server expects to receive.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-6964",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

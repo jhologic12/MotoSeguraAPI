@@ -7,6 +7,7 @@ using MotoSeguraAPI.Services.Interfaces;
 using AutoMapper;
 using System.Security.Claims;
 using Microsoft.Extensions.Logging;
+using MotoSeguraAPI.Services.Analisis;
 
 namespace MotoSeguraAPI.Controllers
 {
@@ -61,6 +62,8 @@ namespace MotoSeguraAPI.Controllers
 
             var trayecto = _mapper.Map<Trayecto>(dto);
             trayecto.UserId = userId;
+            // Enriquecer con datos calculados
+            trayecto = AnalizadorTrayectoService.EnriquecerTrayecto(trayecto, dto);
 
             _context.Trayectos.Add(trayecto);
             _context.SaveChanges();
@@ -76,5 +79,31 @@ namespace MotoSeguraAPI.Controllers
                 trayecto.VerificacionCasco?.CascoDetectado
             });
         }
+
+
+        [HttpGet("historial")]
+        [Authorize]
+        [ProducesResponseType(typeof(List<TrayectoResumenDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        public IActionResult GetHistorial()
+        {
+            var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userIdClaim) || !Guid.TryParse(userIdClaim, out var userId))
+            {
+                _logger.LogWarning("❌ Token inválido o expirado.");
+                return Unauthorized("Token inválido o expirado.");
+            }
+
+            var trayectos = _context.Trayectos
+                .Where(t => t.UserId == userId)
+                .OrderByDescending(t => t.FechaInicio)
+                .ToList();
+
+            var resultado = _mapper.Map<List<TrayectoResumenDto>>(trayectos);
+
+            _logger.LogInformation("✅ Historial de trayectos recuperado para el usuario {UserId}", userId);
+            return Ok(resultado);
+        }
+
     }
 }

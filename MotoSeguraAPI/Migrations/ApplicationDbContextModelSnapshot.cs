@@ -49,14 +49,26 @@ namespace MotoSeguraAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
+                    b.Property<double>("AceleracionPromedio")
+                        .HasColumnType("REAL");
+
                     b.Property<double>("DistanciaRecorridaKm")
                         .HasColumnType("REAL");
+
+                    b.Property<int>("ExcesoVelocidad")
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("FechaFin")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("FechaInicio")
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("FrenadasFuertes")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("GirosBruscos")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("ModoConduccion")
                         .IsRequired()
@@ -97,6 +109,9 @@ namespace MotoSeguraAPI.Migrations
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
 
                     b.ToTable("Users");
                 });

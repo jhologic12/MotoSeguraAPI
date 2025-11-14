@@ -1,10 +1,13 @@
+using System.Text.Json.Serialization;
+
 namespace MotoSeguraApi.Models.SubModels
 {
-    
     public class VerificacionCasco
-{
-    public string FotoCasco { get; set; } = string.Empty;
-    public bool CascoDetectado { get; set; }
-}
+    {
+        [JsonPropertyName("fotoCasco")]
+        public string FotoCasco { get; set; } = string.Empty;
 
+        [JsonPropertyName("casco_Detectado")]
+        public bool CascoDetectado { get; set; }
+    }
 }
