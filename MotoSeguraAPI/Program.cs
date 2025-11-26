@@ -1,27 +1,26 @@
 using dotenv.net;
-using FluentValidation;
-using FluentValidation.AspNetCore;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi.Models;
-using MotoSeguraAPI.Data;
-using MotoSeguraAPI.Services;
-using MotoSeguraAPI.Services.Analisis;
-using MotoSeguraAPI.Services.Historial;
-using MotoSeguraAPI.Services.Interfaces;
-using MotoSeguraAPI.Services.Interfaces.Analisis;
-using MotoSeguraAPI.Services.TrayectoService;
 using MotoSeguraAPI.Validators;
-using System.Text;
-
-DotEnv.Load();
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ===========================================
-// 🧱 FACTORIZACIÓN
-// ===========================================
+// ===================================================
+// 1️⃣ Configuración global (siempre leer variables)
+// ===================================================
+builder.Configuration
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true)
+    .AddEnvironmentVariables();
+
+// En desarrollo sí cargamos .env
+if (builder.Environment.IsDevelopment())
+{
+    DotEnv.Load();
+    Console.WriteLine("🟢 .env cargado (Development)");
+}
+
+// ===================================================
+// 2️⃣ Extensiones (orden recomendado)
+// ===================================================
 builder.ConfigureKestrelServer();
 builder.ConfigureJwtAuth();
 builder.ConfigureDatabase();
@@ -35,27 +34,24 @@ builder.Services.AddAutoMapper(typeof(Program));
 
 var app = builder.Build();
 
-// ===========================================
-// 🧱 PIPELINE
-// ===========================================
+// ===================================================
+// 3️⃣ Pipeline
+// ===================================================
 await app.CheckDatabaseConnection();
 
 app.UseRouting();
 app.UseCors("FrontendPolicy");
 app.UseAuthentication();
 app.UseAuthorization();
-app.UseSwagger();
-app.UseSwaggerUI();
-app.UseHttpsRedirection();
 
-// Debug Authorization header
-app.Use(async (context, next) =>
-{
-    Console.WriteLine($"🧪 Authorization Header: {context.Request.Headers["Authorization"]}");
-    await next();
-});
+// Swagger solo en desarrollo
+
+    app.UseSwagger();
+    app.UseSwaggerUI();
+
 
 app.MapControllers();
+
 await app.RunAsync();
 
 public partial class Program { }

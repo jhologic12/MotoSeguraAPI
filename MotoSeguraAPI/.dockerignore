@@ -1,0 +1,9 @@
+bin/
+obj/
+.env
+*.user
+*.db
+*.mdf
+*.ldf
+.vscode/
+.idea/
