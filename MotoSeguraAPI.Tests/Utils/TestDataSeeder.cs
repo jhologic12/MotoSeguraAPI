@@ -2,6 +2,7 @@ using MotoSeguraAPI.Data;
 using MotoSeguraAPI.Models;
 using System;
 using System.Collections.Generic;
+using MotoSeguraAPI.Dtos; 
 
 namespace MotoSeguraAPI.Tests.Utils
 {
@@ -19,28 +20,27 @@ namespace MotoSeguraAPI.Tests.Utils
                 PasswordHash = "hashed-password"
             };
 
-            var trayectos = new List<Trayecto>
+            // ✅ SOLO crear usuario - evitar problemas con propiedades complejas
+            context.Users.Add(user);
+            context.SaveChanges();
+        }
+
+        /// <summary>
+        /// Semilla básica solo con usuario (sin trayectos)
+        /// </summary>
+        public static User SeedBasicUser(ApplicationDbContext context)
+        {
+            var user = new User
             {
-                new Trayecto
-                {
-                    Id = Guid.NewGuid(),
-                    FechaInicio = DateTime.Now.AddMinutes(-20),
-                    FechaFin = DateTime.Now,
-                    ModoConduccion = "Normal",
-                    DistanciaMetros = 1500,
-                    TiempoSegundos = 1200,
-                    VelocidadPromedio = 45,
-                    AceleracionPromedio = 1.5,
-                    FrenadasFuertes = 1,
-                    GirosBruscos = 0,
-                    ExcesoVelocidad = 0,
-                    UserId = userId
-                }
+                Id = Guid.NewGuid(),
+                Name = "Test User",
+                Email = "test@example.com",
+                PasswordHash = "hashed-password"
             };
 
             context.Users.Add(user);
-            context.Trayectos.AddRange(trayectos);
             context.SaveChanges();
+            return user;
         }
     }
 }

@@ -1,74 +1,35 @@
 using System.Security.Claims;
-using MotoSeguraAPI.Models;
-using MotoSeguraApi.Dtos;
+using MotoSeguraAPI.Dtos;
 
 namespace MotoSeguraAPI.Tests.Utils
 {
     public static class TestHelper
     {
-        public static ClaimsPrincipal FakeUserPrincipal(Guid userId)
-        {
-            return new ClaimsPrincipal(new ClaimsIdentity(new[]
+        public static ClaimsPrincipal FakeUserPrincipal(Guid userId) =>
+            new(new ClaimsIdentity(new[]
             {
                 new Claim(ClaimTypes.NameIdentifier, userId.ToString())
             }));
-        }
 
-        public static User FakeUser(Guid? id = null)
-        {
-            return new User
-            {
-                Id = id ?? Guid.NewGuid(),
-                Name = "Jhon Ospino",
-                Email = "jaofdev1@yopmail.com",
-                PasswordHash = "hashed-password"
-            };
-        }
-
-        public static UserProfileDto FakeUserProfile(Guid? id = null)
-        {
-            return new UserProfileDto
+        public static UserProfileDto FakeUserProfile(Guid? id = null) =>
+            new()
             {
                 Id = id ?? Guid.NewGuid(),
                 Name = "Jhon Ospino",
                 Email = "jaofdev1@yopmail.com"
             };
-        }
 
-        public static TrayectoDto FakeTrayectoDto()
-        {
-            return new TrayectoDto
+        public static TrayectoDto FakeTrayectoDto() =>
+            new()
             {
-                FechaInicio = DateTime.Now,
-                FechaFin = DateTime.Now.AddMinutes(15),
+                FechaInicio = DateTime.UtcNow,
+                FechaFin = DateTime.UtcNow.AddMinutes(15),
                 ModoConduccion = "Normal",
-                DistanciaMetros = 1200,
-                TiempoSegundos = 900,
-                VelocidadPromedio = 35.5,
-                AceleracionPromedio = 1.2,
-                FrenadasFuertes = 2,
-                GirosBruscos = 1,
-                ExcesoVelocidad = 0
+                DistanciaRecorridaKm = 1.2,
+                VelocidadPromedioKmH = 35.5,
+                VelocidadMaximaKmH = 60.0
             };
-        }
 
-        public static Trayecto FakeTrayecto(Guid? userId = null)
-        {
-            return new Trayecto
-            {
-                Id = Guid.NewGuid(),
-                FechaInicio = DateTime.Now,
-                FechaFin = DateTime.Now.AddMinutes(15),
-                ModoConduccion = "Normal",
-                DistanciaMetros = 1200,
-                TiempoSegundos = 900,
-                VelocidadPromedio = 35.5,
-                AceleracionPromedio = 1.2,
-                FrenadasFuertes = 2,
-                GirosBruscos = 1,
-                ExcesoVelocidad = 0,
-                UserId = userId ?? Guid.NewGuid()
-            };
-        }
+        // ✅ ELIMINAR FakeTrayecto que usa tipos complejos
     }
 }
