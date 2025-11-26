@@ -1,7 +1,7 @@
 
 using System.ComponentModel.DataAnnotations;
 
-namespace MotoSeguraApi.Dtos
+namespace MotoSeguraAPI.Dtos
 {
     public class UserRegisterDto
     {

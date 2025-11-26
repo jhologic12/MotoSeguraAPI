@@ -1,5 +1,5 @@
-using MotoSeguraApi.Dtos;
-using MotoSeguraAPI.DTOs;
+using MotoSeguraAPI.Dtos;
+
 
 namespace MotoSeguraAPI.Services.Interfaces
 {

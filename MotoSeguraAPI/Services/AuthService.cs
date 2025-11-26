@@ -3,7 +3,7 @@ using MotoSeguraAPI.Data;
 using MotoSeguraAPI.Models;
 using MotoSeguraAPI.Services.Interfaces;
 using MotoSeguraAPI.Services;
-using MotoSeguraApi.Dtos;
+using MotoSeguraAPI.Dtos;
 
 namespace MotoSeguraAPI.Services
 {

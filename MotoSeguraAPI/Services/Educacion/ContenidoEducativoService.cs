@@ -1,4 +1,5 @@
 using MotoSeguraAPI.Models;
+using System.Collections.Generic;
 
 namespace MotoSeguraAPI.Services.Educacion
 {
@@ -7,13 +8,19 @@ namespace MotoSeguraAPI.Services.Educacion
         public static List<string> Sugerir(Trayecto trayecto)
         {
             var sugerencias = new List<string>();
-
-            if (trayecto.ExcesoVelocidad > 0)
-                sugerencias.Add("🎥 Video: Cómo evitar el exceso de velocidad");
-
+            
+            if (trayecto.VelocidadMaximaKmH > 60)
+                sugerencias.Add("Considera reducir tu velocidad máxima en zonas urbanas");
+                
             if (trayecto.FrenadasFuertes > 3)
-                sugerencias.Add("📘 Infografía: Técnicas de frenado progresivo");
-
+                sugerencias.Add("Practica técnicas de frenado anticipado para mayor seguridad");
+                
+            if (trayecto.GirosBruscos > 2)
+                sugerencias.Add("Realiza los giros con mayor suavidad para mejorar la estabilidad");
+                
+            if (trayecto.AceleracionPromedio > 0.5)
+                sugerencias.Add("Una aceleración más gradual ayuda a ahorrar combustible");
+                
             return sugerencias;
         }
     }

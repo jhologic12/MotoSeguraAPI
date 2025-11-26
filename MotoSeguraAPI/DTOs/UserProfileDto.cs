@@ -1,4 +1,4 @@
-namespace MotoSeguraApi.Dtos
+namespace MotoSeguraAPI.Dtos
 {
     public class UserProfileDto
     {

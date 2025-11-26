@@ -1,6 +1,6 @@
 using System.Security.Claims;
-using MotoSeguraApi.Dtos;
 using MotoSeguraAPI.Models;
+using MotoSeguraAPI.Dtos;
 
 namespace MotoSeguraAPI.Services.Interfaces
 {

@@ -1,8 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 
-using MotoSeguraApi.Dtos;
 
-namespace MotoSeguraApi.Dtos
+namespace MotoSeguraAPI.Dtos
 {
     public class TrayectoDto
     {

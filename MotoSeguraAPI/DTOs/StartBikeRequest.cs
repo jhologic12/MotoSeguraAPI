@@ -1,4 +1,4 @@
-namespace MotoSeguraAPI.DTOs
+namespace MotoSeguraAPI.Dtos
 {
     public class StartBikeRequest
     {

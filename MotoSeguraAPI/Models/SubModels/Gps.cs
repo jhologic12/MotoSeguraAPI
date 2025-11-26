@@ -1,6 +1,6 @@
 
 
-using MotoSeguraApi.Dtos;
+using MotoSeguraAPI.Dtos;
 
 namespace MotoSeguraApi.Models.SubModels
 {

@@ -1,7 +1,7 @@
 
 
 using FluentValidation;
-using MotoSeguraApi.Dtos;
+using MotoSeguraAPI.Dtos;
 namespace MotoSeguraApi.Validators;
 
 public class AcelerometroDtoValidator : AbstractValidator<AcelerometroDto>

@@ -1,4 +1,5 @@
-namespace MotoSeguraApi.Dtos
+// TrayectoResumenDto.cs
+namespace MotoSeguraAPI.Dtos
 {
     public class TrayectoResumenDto
     {
@@ -9,7 +10,7 @@ namespace MotoSeguraApi.Dtos
         public double VelocidadPromedioKmH { get; set; }
         public double VelocidadMaximaKmH { get; set; }
         public string ModoConduccion { get; set; } = string.Empty;
-        public int Eventos { get; set; }
+        public int Eventos { get; set; }            // <- entero
         public bool CascoDetectado { get; set; }
     }
 }

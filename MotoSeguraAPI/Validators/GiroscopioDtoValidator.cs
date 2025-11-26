@@ -1,5 +1,5 @@
 using FluentValidation;
-using MotoSeguraApi.Dtos;
+using MotoSeguraAPI.Dtos;
 
 namespace MotoSeguraApi.Validators {
     public class GiroscopioDtoValidator : AbstractValidator<GiroscopioDto>

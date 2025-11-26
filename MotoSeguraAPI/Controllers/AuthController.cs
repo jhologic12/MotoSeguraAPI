@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MotoSeguraAPI.Services.Interfaces;
-using MotoSeguraApi.Dtos;
+using MotoSeguraAPI.Dtos;
 using System.Security.Claims;
 
 namespace MotoSeguraAPI.Controllers

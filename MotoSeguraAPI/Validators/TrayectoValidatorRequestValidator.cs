@@ -1,6 +1,5 @@
-
 using FluentValidation;
-using MotoSeguraApi.Dtos;
+using MotoSeguraAPI.Dtos;
 
 namespace MotoSeguraAPI.Validators
 {
@@ -11,8 +10,14 @@ namespace MotoSeguraAPI.Validators
             RuleFor(x => x.FechaInicio).NotEmpty();
             RuleFor(x => x.FechaFin).GreaterThan(x => x.FechaInicio);
             RuleFor(x => x.VelocidadPromedioKmH).GreaterThanOrEqualTo(0);
-            RuleFor(x => x.VerificacionCasco.Casco_Detectado)
-                .Equal(true).WithMessage("Debe colocarse el casco para iniciar el trayecto.");
+            
+            // ✅ CAMBIA ESTA LÍNEA - Elimina la validación que obliga el casco
+            // RuleFor(x => x.VerificacionCasco.Casco_Detectado)
+            //     .Equal(true).WithMessage("Debe colocarse el casco para iniciar el trayecto.");
+            
+            // ✅ OPCIONAL: Agrega una validación más flexible
+            RuleFor(x => x.VerificacionCasco)
+                .NotNull().WithMessage("La verificación de casco es requerida");
         }
     }
 }

@@ -1,6 +1,6 @@
 using System.Security.Claims;
 using Microsoft.EntityFrameworkCore;
-using MotoSeguraApi.Dtos;
+using MotoSeguraAPI.Dtos;
 using MotoSeguraAPI.Data;
 using MotoSeguraAPI.Models;
 using MotoSeguraAPI.Services.Interfaces;

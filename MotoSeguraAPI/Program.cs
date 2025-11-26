@@ -9,8 +9,12 @@ using MotoSeguraAPI.Services;
 using MotoSeguraAPI.Services.Interfaces;
 using MotoSeguraAPI.Services.Historial;
 using MotoSeguraAPI.Validators;
-using MotoSeguraApi.Dtos;
+using MotoSeguraAPI.Dtos;
 using FluentValidation;
+using MotoSeguraAPI.Services.TrayectoService;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
+using MotoSeguraAPI.Services.Interfaces.Analisis;
+using MotoSeguraAPI.Services.Analisis;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -54,9 +58,9 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddAuthorization();
 
-// 🗃️ Base de datos SQLite
+// 🗃️ Base de datos
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlite("Data Source=motosegura.db"));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // 🧩 Servicios base
 builder.Services.AddControllers();
@@ -67,11 +71,15 @@ builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddFluentValidationClientsideAdapters();
 builder.Services.AddValidatorsFromAssemblyContaining<TrayectoValidator>();
 
-// 🧰 Servicios personalizados
+// 🧰 Servicios personalizados - CORREGIDOS
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<JwtService>();
 builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<HistorialUsuarioService>();
+
+// ✅ SERVICIOS ESENCIALES
+builder.Services.AddScoped<MotoSeguraAPI.Services.Analisis.IAnalizadorTrayectoService, AnalizadorTrayectoService>();
+builder.Services.AddScoped<IHistorialUsuarioService, HistorialUsuarioService>();
+builder.Services.AddScoped<ITrayectoService, TrayectoService>();
 
 // 📚 Swagger con soporte para JWT
 builder.Services.AddEndpointsApiExplorer();
@@ -120,16 +128,37 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// 🚦 Middleware en orden correcto
-app.UseRouting(); // ✅ necesario para CORS
-app.UseCors("PermitirFrontend");
+// ✅ VERIFICACIÓN DE CONEXIÓN NEON
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    try
+    {
+        var canConnect = await dbContext.Database.CanConnectAsync();
+        if (canConnect)
+        {
+            Console.WriteLine("🎉 ¡CONEXIÓN A NEON EXITOSA!");
+            Console.WriteLine("📍 Host: ep-sparkling-pine-a45o89mh-pooler.us-east-1.aws.neon.tech");
+            Console.WriteLine("🗃️  Base de datos: neondb");
+        }
+        else
+        {
+            Console.WriteLine("⚠️  No se pudo conectar a Neon");
+        }
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"❌ ERROR DE CONEXIÓN A NEON: {ex.Message}");
+    }
+}
 
+// 🚦 Middleware en orden correcto
+app.UseRouting();
+app.UseCors("PermitirFrontend");
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.UseSwagger();
 app.UseSwaggerUI();
-
 app.UseHttpsRedirection();
 
 // 🧪 Log de encabezado Authorization
@@ -141,5 +170,6 @@ app.Use(async (context, next) =>
 });
 
 app.MapControllers();
-
 await app.RunAsync();
+
+public partial class Program { }

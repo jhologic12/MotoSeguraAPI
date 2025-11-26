@@ -1,7 +1,7 @@
 using AutoMapper;
 using MotoSeguraAPI.Models.SubModels;
 using MotoSeguraApi.Models;
-using MotoSeguraApi.Dtos;
+using MotoSeguraAPI.Dtos;
 using MotoSeguraAPI.Models;
 using MotoSeguraApi.Models.SubModels;
 

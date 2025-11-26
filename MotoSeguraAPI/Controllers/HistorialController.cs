@@ -1,26 +1,27 @@
 using Microsoft.AspNetCore.Mvc;
 using MotoSeguraAPI.Dtos;
 using MotoSeguraAPI.Services.Historial;
+using MotoSeguraAPI.Services.Interfaces;
 
-namespace MotoSeguraAPI.Controllers{
-
+namespace MotoSeguraAPI.Controllers
+{
     [ApiController]
     [Route("api/usuario/{userId}/historial")]
     public class HistorialController : ControllerBase
     {
-        private readonly HistorialUsuarioService _historialService;
+        private readonly IHistorialUsuarioService _historialService;
 
-        public HistorialController(HistorialUsuarioService historialService)
+        public HistorialController(IHistorialUsuarioService historialService)
         {
             _historialService = historialService;
         }
 
         [HttpGet]
-        public ActionResult<HistorialUsuarioDto> Get(Guid userId)
+        public async Task<ActionResult<HistorialUsuarioDto>> Get(Guid userId)
         {
             try
             {
-                var historial = _historialService.ObtenerHistorial(userId);
+                var historial = await _historialService.ObtenerHistorialAsync(userId);
                 return Ok(historial);
             }
             catch (Exception ex)

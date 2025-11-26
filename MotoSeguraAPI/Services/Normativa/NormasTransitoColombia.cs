@@ -9,3 +9,5 @@ namespace MotoSeguraAPI.Services.Normativa
         public const int MaxExcesosVelocidad = 0;
     }
 }
+
+// aUNzzWSQOC7qtCOQ motosegura

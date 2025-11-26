@@ -1,13 +1,15 @@
-using MotoSeguraApi.Dtos;
+using MotoSeguraAPI.Dtos;
 using MotoSeguraAPI.Models;
 
 namespace MotoSeguraAPI.Services.Analisis
 {
-    public static class AnalizadorTrayectoService
+    /// <summary>
+    /// Servicio encargado de enriquecer un trayecto con métricas calculadas.
+    /// </summary>
+    public class AnalizadorTrayectoService : IAnalizadorTrayectoService
     {
-        public static Trayecto EnriquecerTrayecto(Trayecto trayecto, TrayectoDto dto)
+        public Trayecto EnriquecerTrayecto(Trayecto trayecto, TrayectoDto dto)
         {
-            // Simulación de cálculo (reemplazar con lógica real)
             trayecto.AceleracionPromedio = CalcularAceleracion(dto);
             trayecto.FrenadasFuertes = ContarFrenadas(dto);
             trayecto.GirosBruscos = ContarGiros(dto);
@@ -16,34 +18,40 @@ namespace MotoSeguraAPI.Services.Analisis
             return trayecto;
         }
 
-        private static double CalcularAceleracion(TrayectoDto dto)
-
+        private double CalcularAceleracion(TrayectoDto dto)
         {
+            // Validar que el acelerómetro no sea null
+            if (dto.Acelerometro == null)
+                return 0.0;
 
-        
-           
             return dto.Acelerometro.Aceleracion;
-
         }
 
-        private static int ContarFrenadas(TrayectoDto dto)
+        private int ContarFrenadas(TrayectoDto dto)
         {
-
-            
-            // Detectar caídas abruptas de velocidad
+            // TODO: Implementar lógica real de detección de frenadas fuertes
+            // Ejemplo: comparar variaciones de velocidad entre muestras
             return 2;
         }
 
-        private static int ContarGiros(TrayectoDto dto)
+        private int ContarGiros(TrayectoDto dto)
         {
-            // Detectar cambios bruscos de dirección
+            // TODO: Implementar lógica real de detección de giros bruscos
             return 1;
         }
 
-        private static int ContarExcesos(TrayectoDto dto)
+        private int ContarExcesos(TrayectoDto dto)
         {
-            // Comparar muestras de velocidad con umbral legal
+            // TODO: Implementar lógica real de detección de excesos de velocidad
             return 0;
         }
+    }
+
+    /// <summary>
+    /// Interfaz para permitir mocking y pruebas unitarias.
+    /// </summary>
+    public interface IAnalizadorTrayectoService
+    {
+        Trayecto EnriquecerTrayecto(Trayecto trayecto, TrayectoDto dto);
     }
 }
