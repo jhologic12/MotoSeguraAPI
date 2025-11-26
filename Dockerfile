@@ -1,23 +1,30 @@
-# Etapa de build
-FROM mcr.microsoft.com/dotnet/sdk:7.0-alpine AS build
+# =============================
+# Build Stage
+# =============================
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copiar csproj y restaurar
-COPY *.sln .
-COPY MotoSeguraAPI/*.csproj ./MotoSeguraAPI/
-RUN dotnet restore
+# Copiar solución y proyectos
+COPY MotoSeguraAPI.sln ./
+COPY *.csproj ./
 
-# Copiar todo y publicar
+# Restaurar dependencias
+RUN dotnet restore MotoSeguraAPI.sln
+
+# Copiar todo el código fuente
 COPY . .
-WORKDIR /src/MotoSeguraAPI
-RUN dotnet publish -c Release -o /app --no-restore
 
-# Etapa runtime
-FROM mcr.microsoft.com/dotnet/aspnet:7.0-alpine AS runtime
+# Publicar
+RUN dotnet publish MotoSeguraAPI.sln -c Release -o /app/publish --no-restore
+
+# =============================
+# Runtime Stage
+# =============================
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
-COPY --from=build /app ./
 
-EXPOSE 8080
+COPY --from=build /app/publish .
+
 ENV ASPNETCORE_URLS=http://+:8080
 
 ENTRYPOINT ["dotnet", "MotoSeguraAPI.dll"]
