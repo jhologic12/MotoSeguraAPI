@@ -3,16 +3,16 @@
   <ProjectName>MotoSeguraAPI</ProjectName>
   <ProjectLanguage>C#</ProjectLanguage>
   <ProjectType>Product</ProjectType>
-  <ProjectGuid>b94ce892-8b49-4b9d-b3b2-48f7ef3e014f</ProjectGuid>
+  <ProjectGuid>1255908c-93bd-d77f-999a-21f456c7ef9d</ProjectGuid>
   <FullPath>C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\MotoSeguraAPI.csproj</FullPath>
   <IsExcluded>false</IsExcluded>
   <AnalysisResultFiles>
-    <AnalysisResultFile Id="FilesToAnalyze" Location="C:\jaofdev\MotoSeguraBackend\.sonarqube\conf\0\FilesToAnalyze.txt" />
+    <AnalysisResultFile Id="FilesToAnalyze" Location="C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\.sonarqube\conf\0\FilesToAnalyze.txt" />
   </AnalysisResultFiles>
   <AnalysisSettings>
-    <Property Name="sonar.cs.roslyn.reportFilePaths">C:\jaofdev\MotoSeguraBackend\.sonarqube\out\0\Issues.json</Property>
-    <Property Name="sonar.cs.analyzer.projectOutPaths">C:\jaofdev\MotoSeguraBackend\.sonarqube\out\0</Property>
-    <Property Name="sonar.cs.scanner.telemetry">C:\jaofdev\MotoSeguraBackend\.sonarqube\out\0\Telemetry.json</Property>
+    <Property Name="sonar.cs.roslyn.reportFilePaths">C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\.sonarqube\out\0\Issues.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPaths">C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\.sonarqube\out\0</Property>
+    <Property Name="sonar.cs.scanner.telemetry">C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\.sonarqube\out\0\Telemetry.json</Property>
   </AnalysisSettings>
   <Configuration>Debug</Configuration>
   <Platform>AnyCPU</Platform>

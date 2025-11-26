@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AnalysisConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
-  <SonarConfigDir>C:\jaofdev\MotoSeguraBackend\.sonarqube\conf</SonarConfigDir>
-  <SonarOutputDir>C:\jaofdev\MotoSeguraBackend\.sonarqube\out</SonarOutputDir>
-  <SonarBinDir>C:\jaofdev\MotoSeguraBackend\.sonarqube\bin</SonarBinDir>
-  <SonarScannerWorkingDirectory>C:\jaofdev\MotoSeguraBackend</SonarScannerWorkingDirectory>
+  <SonarConfigDir>C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\.sonarqube\conf</SonarConfigDir>
+  <SonarOutputDir>C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\.sonarqube\out</SonarOutputDir>
+  <SonarBinDir>C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\.sonarqube\bin</SonarBinDir>
+  <SonarScannerWorkingDirectory>C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI</SonarScannerWorkingDirectory>
   <JavaExePath>C:\Users\jaofd\.sonar\cache\4bafe2e94439c8193fc8c68247cb0dbaf4e80265b903288f63f128304f129bbe\OpenJDK17U-jre_x64_windows_hotspot_17.0.11_9.zip_extracted\jdk-17.0.11+9-jre/bin/java.exe</JavaExePath>
   <EngineJarPath>C:\Users\jaofd\.sonar\cache\1b3ea4b69e362be92d26060d8caf69e296ef70261ae5d8e01eeba125ffefaa9e\sonarcloud-scanner-engine-12.7.0.1215-all.jar</EngineJarPath>
   <UseSonarScannerCli>false</UseSonarScannerCli>
@@ -11,14 +11,14 @@
   <HasBeginStepCommandLineCredentials>true</HasBeginStepCommandLineCredentials>
   <HasBeginStepCommandLineTruststorePassword>false</HasBeginStepCommandLineTruststorePassword>
   <SonarQubeHostUrl>https://sonarcloud.io</SonarQubeHostUrl>
-  <SonarQubeVersion>8.0.0.76449</SonarQubeVersion>
+  <SonarQubeVersion>8.0.0.76487</SonarQubeVersion>
   <SonarProjectKey>jhologic12_MotoSeguraAPI</SonarProjectKey>
   <AdditionalConfig>
     <ConfigSetting Id="BuildUri" />
     <ConfigSetting Id="TfsUri" />
     <ConfigSetting Id="VsCoverageConverterToolPath" />
     <ConfigSetting Id="UnchangedFilesPath" />
-    <ConfigSetting Id="sonar.pullrequest.cache.basepath" Value="C:\jaofdev\MotoSeguraBackend" />
+    <ConfigSetting Id="sonar.pullrequest.cache.basepath" Value="C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI" />
     <ConfigSetting Id="settings.file.path" Value="C:\Users\jaofd\.dotnet\tools\.store\dotnet-sonarscanner\11.0.0\dotnet-sonarscanner\11.0.0\tools\netcoreapp3.1\any\SonarQube.Analysis.xml" />
   </AdditionalConfig>
   <ServerSettings>
@@ -209,10 +209,9 @@ Automatic Analysis will not be available between 07:00 CET and 09:00 CET</Proper
     <Property Name="sonar.maintenance_mode.link">https://community.sonarsource.com/t/sonarcloud-autoscan-maintenance-september-28th-07-00-and-09-00-cet/101442</Property>
     <Property Name="sonar.maintenance_mode.start_date">2023-09-28T09:10:00:00.000+01:00</Property>
     <Property Name="sonar.sensor.cache.baseUrl">https://api.sonarcloud.io/analysis</Property>
-    <Property Name="sonar.core.startTime">11/11/2025 8:22:29 a. m.</Property>
+    <Property Name="sonar.core.startTime">12/11/2025 5:41:44 a. m.</Property>
   </ServerSettings>
   <LocalSettings>
-    <Property Name="sonar.host.url">https://sonarcloud.io</Property>
     <Property Name="sonar.organization">jaofdev</Property>
   </LocalSettings>
   <ScannerOptsSettings>
@@ -221,8 +220,8 @@ Automatic Analysis will not be available between 07:00 CET and 09:00 CET</Proper
   <AnalyzersSettings>
     <AnalyzerSettings>
       <Language>cs</Language>
-      <RulesetPath>C:\jaofdev\MotoSeguraBackend\.sonarqube\conf\Sonar-cs.ruleset</RulesetPath>
-      <DeactivatedRulesetPath>C:\jaofdev\MotoSeguraBackend\.sonarqube\conf\Sonar-cs-none.ruleset</DeactivatedRulesetPath>
+      <RulesetPath>C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\.sonarqube\conf\Sonar-cs.ruleset</RulesetPath>
+      <DeactivatedRulesetPath>C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\.sonarqube\conf\Sonar-cs-none.ruleset</DeactivatedRulesetPath>
       <AnalyzerPlugins>
         <AnalyzerPlugin Key="architecturecsharpfrontend" Version="2.10.0.7084" StaticResourceName="SonarAnalyzer.Architecture-2.10.0.7084.zip">
           <AssemblyPaths>
@@ -232,7 +231,6 @@ Automatic Analysis will not be available between 07:00 CET and 09:00 CET</Proper
         </AnalyzerPlugin>
         <AnalyzerPlugin Key="securitycsharpfrontend" Version="11.11.0.40669" StaticResourceName="SonarAnalyzer.Security.CSharp-11.11.0.40669.zip">
           <AssemblyPaths>
-            <Path>C:\Users\jaofd\AppData\Local\Temp\.sonarqube\resources\3\Google.Protobuf.License.txt</Path>
             <Path>C:\Users\jaofd\AppData\Local\Temp\.sonarqube\resources\3\SonarAnalyzer.Security.CSharp.dll</Path>
           </AssemblyPaths>
         </AnalyzerPlugin>
@@ -240,18 +238,17 @@ Automatic Analysis will not be available between 07:00 CET and 09:00 CET</Proper
           <AssemblyPaths>
             <Path>C:\Users\jaofd\AppData\Local\Temp\.sonarqube\resources\4\SonarAnalyzer.CSharp.dll</Path>
             <Path>C:\Users\jaofd\AppData\Local\Temp\.sonarqube\resources\4\SonarAnalyzer.Enterprise.CSharp.dll</Path>
-            <Path>C:\Users\jaofd\AppData\Local\Temp\.sonarqube\resources\4\THIRD-PARTY-NOTICES.txt</Path>
           </AssemblyPaths>
         </AnalyzerPlugin>
       </AnalyzerPlugins>
       <AdditionalFilePaths>
-        <Path>C:\jaofdev\MotoSeguraBackend\.sonarqube\conf\cs\SonarLint.xml</Path>
+        <Path>C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\.sonarqube\conf\cs\SonarLint.xml</Path>
       </AdditionalFilePaths>
     </AnalyzerSettings>
     <AnalyzerSettings>
       <Language>vbnet</Language>
-      <RulesetPath>C:\jaofdev\MotoSeguraBackend\.sonarqube\conf\Sonar-vbnet.ruleset</RulesetPath>
-      <DeactivatedRulesetPath>C:\jaofdev\MotoSeguraBackend\.sonarqube\conf\Sonar-vbnet-none.ruleset</DeactivatedRulesetPath>
+      <RulesetPath>C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\.sonarqube\conf\Sonar-vbnet.ruleset</RulesetPath>
+      <DeactivatedRulesetPath>C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\.sonarqube\conf\Sonar-vbnet-none.ruleset</DeactivatedRulesetPath>
       <AnalyzerPlugins>
         <AnalyzerPlugin Key="securityvbnetfrontend" Version="11.11.0.40669" StaticResourceName="SonarAnalyzer.Security.VisualBasic-11.11.0.40669.zip">
           <AssemblyPaths>
@@ -268,7 +265,7 @@ Automatic Analysis will not be available between 07:00 CET and 09:00 CET</Proper
         </AnalyzerPlugin>
       </AnalyzerPlugins>
       <AdditionalFilePaths>
-        <Path>C:\jaofdev\MotoSeguraBackend\.sonarqube\conf\vbnet\SonarLint.xml</Path>
+        <Path>C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\.sonarqube\conf\vbnet\SonarLint.xml</Path>
       </AdditionalFilePaths>
     </AnalyzerSettings>
   </AnalyzersSettings>

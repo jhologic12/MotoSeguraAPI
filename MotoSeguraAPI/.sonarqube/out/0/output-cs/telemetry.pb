@@ -1,1 +1,0 @@
-UR?C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\MotoSeguraAPI.csproj¢net8.0òCSharp12

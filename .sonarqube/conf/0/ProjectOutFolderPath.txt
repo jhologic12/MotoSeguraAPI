@@ -1,1 +1,1 @@
-C:\jaofdev\MotoSeguraBackend\.sonarqube\out\0
+C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\.sonarqube\out\0

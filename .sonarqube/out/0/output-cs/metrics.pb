@@ -1,42 +1,55 @@
 }
 ZC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Validators\TrayectoValidatorRequestValidator.cs 8r	
-‚^
-NC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Services\Interfaces\IAuthService.csr
-	
-s
-QC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Validators\AcelerometroDtoValidator.cs 8jr	
-‚q
+‚q
+HC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Validators\GpsDtoValidator.cs 8r	
+‚	j
+OC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Validators\GiroscopioDtoValidator.cs 8r	
+‚	q
 PC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Validators\CoordenadasDtoValidator.cs 8r	
 ‚	o
 QC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Validators\ConectividadDtoValidator.cs 8r	
 ‚	
-‰
-BC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Services\AuthService.cs 8r(	
-!"#$&'()*,-./x‚!"#()*,
-BC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Services\UserService.cs 8r,	
- #$%&')*+-./012356x‚%&')*+-/01q
-HC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Validators\GpsDtoValidator.cs 8r	
-‚	j
-OC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Validators\GiroscopioDtoValidator.cs 8r	
-‚	‡
+s
+QC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Validators\AcelerometroDtoValidator.cs 8jr	
+‚—
+YC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Services\Analisis\AnalizadorTrayectoService.cs	 8j
+!'-r 	"#%&()+,./01‚	"(.§
+WC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Services\TrayectoServices\TrayectoService.cs 8r.	 "$%&')+,-./01234567x‚ "$%&)+0123h
+WC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Services\Normativa\NormasTransitoColombia.csr	
+y
+SC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Services\Normativa\EvaluadorNormativo.cs 8r	
+x‚
+‡
 AC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Services\JwtService.cs	 8jr)	
  "#$%&'()+,-./0‚ %,-a
 NC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Services\Interfaces\IUserService.csr	
-`
-=C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Models\Trayecto.cs "8"r	
-Ó
-5C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Program.cs>8j
->CbpsrX	
- !"#%'()*+,-.0123456789:<?@ADEFGHIJKLMNPQRSTUVWXYZ[\]^`cdfhijklmpqsux‚- "#%')*,.0678<?@ADEGKLPW[`cdfhjklpqsu]
+^
+NC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Services\Interfaces\IAuthService.csr
+	
+¯
+XC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Services\Historial\HistorialUsuarioService.cs
+ 8r2	
+ !"#%&'()*+,-./123456789x‚!"#%*+,-134‰
+BC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Services\AuthService.cs 8r(	
+!"#$&'()*,-./x‚!"#()*,
+BC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Services\UserService.cs 8r,	
+ #$%&')*+-./012356x‚%&')*+-/01{
+UC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Services\Gamificacion\RecompensaService.cs 8jr	
+x‚€
+ZC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Services\Educacion\ContenidoEducativoService.cs 8r	x‚f
+=C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Models\Trayecto.cs *8*r	
+"#$%&'Ž
+5C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Program.csM8j"9=AFLiz{†r|	
+ #$%&'()*+,-./0123457:;>?BCDGHIJMNOPQRSTUVWYZ[\]^_`abcdefgjklmnopqrstuvx{|~‚„‡ˆ‰Š‹ŒŽx‚@ #%&(*+1237:;>?BCDGHIJMNPTUY`djlnx{|~‚„‡‰Š‹Ž]
 9C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Models\User.cs 
 8
 jr
-‚f
-PC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Models\SubModels\VerificacionCasco.cs 8r
-‚W
+‚Z
+IC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Models\SubModels\Giroscopio.cs 8rW
 BC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Models\SubModels\Gps.cs 8r	
-Z
-IC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Models\SubModels\Giroscopio.cs 8r\
+f
+PC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Models\SubModels\VerificacionCasco.cs 8r
+‚\
 JC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Models\SubModels\Coordenadas.cs 8r
 ]
 KC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Models\SubModels\Conectividad.cs 8r	]
@@ -63,16 +76,19 @@ SC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Migrations\20251105225223_GuidSuppor
  !"#$%&'()*+./0134567‚!#$%')03t
 FC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Mappings\TrayectoProfile.cs 8r	
 ‚]
-GC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\DTOs\VerificacionCascoDto.cs 8r	‚T
-AC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\DTOs\UserProfileDto.cs 8r		M
-9C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\DTOs\GpsDto.cs 8r
-	T
-CC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\DTOs\StartBikeRequest.cs 8rY
+GC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\DTOs\VerificacionCascoDto.cs 8r	‚`
+BC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\DTOs\UserRegisterDto.cs 8r	‚	T
+AC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\DTOs\UserProfileDto.cs 8r		Y
 ?C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\DTOs\UserLoginDto.cs 8r	
 ‚
-`
-BC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\DTOs\UserRegisterDto.cs 8r	‚	b
->C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\DTOs\TrayectoDto.cs 8r‚Q
+^
+GC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\DTOs\TrayectoAnalizadoDto.cs 8r	
+b
+>C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\DTOs\TrayectoDto.cs 8r‚T
+CC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\DTOs\StartBikeRequest.cs 8r]
+FC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\DTOs\HistorialUsuarioDto.cs 8r		‚M
+9C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\DTOs\GpsDto.cs 8r
+	Q
 @C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\DTOs\GiroscopioDto.cs 8r\
 EC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\DTOs\EventoDetectadoDto.cs 8r		‚S
 AC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\DTOs\CoordenadasDto.cs 8rT
@@ -81,7 +97,10 @@ BC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\DTOs\AcelerometroDto.cs 8r
 GC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Data\ApplicationDbContext.cs 8j%&.r'	
  !"#'()*+/01567‚ !"#'()*+/0y
 HC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Controllers\UserController.cs 8r	
-x‚¾
-LC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Controllers\TrayectoController.cs 8rF	 !#$%&'(*+,-./12345789:;<>?ABDFGHIJKLMNOPx‚ (*+-.13478:;>?ABDFHIJKL„
+x‚Ä
+LC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Controllers\TrayectoController.cs 8jArH	
+ !"$%&'()+,-./02345689:;<=?@BDEGIJKLMNOPQRSx‚ !)+,./24589;<?@BDEGIKLMNO~
+MC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Controllers\HistorialController.cs 8r	
+ x‚„
 HC:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\Controllers\AuthController.cs	 8r"	
  "#$%&')*-.x‚	%&')
