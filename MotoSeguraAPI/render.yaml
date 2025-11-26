@@ -14,15 +14,18 @@ services:
       - key: PORT
         value: 8080
 
-      # 🔐 JWT
+      # Cadena de conexión a Neon / Postgres
+      - key: DefaultConnection
+        value: Host=ep-sparkling-pine-a45o89mh-pooler.us-east-1.aws.neon.tech;Port=5432;Database=neondb;Username=neondb_owner;Password=npg_E8XWFI9gzQZJ;SSL Mode=Require
+
+      # Opcional: también compatible con otra convención
+      - key: ConnectionStrings__DefaultConnection
+        value: Host=ep-sparkling-pine-a45o89mh-pooler.us-east-1.aws.neon.tech;Port=5432;Database=neondb;Username=neondb_owner;Password=npg_E8XWFI9gzQZJ;SSL Mode=Require
+
+      # JWT
       - key: Jwt__Key
         value: supersecretkey12345678901234567890
       - key: Jwt__Issuer
         value: MotoSeguraAPI
       - key: Jwt__Audience
         value: MotoSeguraFrontend
-
-      # 🗃 Cadena de conexión Neon
-      - key: DefaultConnection
-        sync: false
-        value: Host=ep-xxx.us-east-1.aws.neon.tech;Port=5432;Database=neondb;Username=neondb_owner;Password=xxx;SSL Mode=Require
