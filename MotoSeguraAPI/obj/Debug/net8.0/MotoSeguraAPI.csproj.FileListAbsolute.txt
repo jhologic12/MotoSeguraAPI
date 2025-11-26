@@ -203,3 +203,4 @@ C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\obj\Debug\net8.0\refint\MotoSeguraAPI
 C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\obj\Debug\net8.0\MotoSeguraAPI.pdb
 C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\obj\Debug\net8.0\MotoSeguraAPI.genruntimeconfig.cache
 C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\obj\Debug\net8.0\ref\MotoSeguraAPI.dll
+C:\jaofdev\MotoSeguraBackend\MotoSeguraAPI\bin\Debug\net8.0\dotenv.net.dll
